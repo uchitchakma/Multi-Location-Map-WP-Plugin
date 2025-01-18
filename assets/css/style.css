@@ -1,0 +1,132 @@
+/* styles.css */
+#myMap {
+    height: 700px;
+    width: 100%;
+  }
+  .root-map-logo{
+    width: 100px;
+    margin-bottom: 10px;
+  }
+  .infowindow-content {
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .root-map-right{
+    width: auto  ; 
+    height: auto  ; 
+    display: flex  ;
+    flex-direction: row  ;
+    gap: 20px  ;
+  }
+  .fa-envelope{
+    color: #333333  ;
+  }
+  .email1name, .email2name{
+    font-size: 22px  ;
+    font-weight: 700  ;
+    margin: 0  ; 
+    color: #333333  ;
+    text-transform: uppercase  ;
+  }
+  .map-email{
+    font-size: 14px  ;
+    font-weight: 400  ;
+    margin: 0  ;
+    color: #333333  ;
+    text-transform: uppercase  ;
+    outline: none  ;
+    text-decoration: none  ;
+  }
+  .map-email:hover{
+    color: #fd9a6b  ;
+  }
+  .image-container{
+    display: flex  ;
+    justify-content: space-between  ;
+    height: auto ;
+    gap: 10px  ;
+    /* width: 330px; */
+  }
+  .img1-div, .img2-div{
+    width: 50%  ;
+    height: 100%  ;
+  }
+  .map-img1, .map-img2{
+    background-position: top center  ;
+    width: 150px  ;
+    height: 100%  ;
+    object-fit: cover  ;
+  }
+  .map-right-container{
+    display: flex ;
+    flex-direction: column ;
+    justify-content: center ;
+
+  }
+  .map-loc-name{
+    font-size: 26px  ;
+    font-weight: 600  ;
+    margin: 0  ;
+    color: #47a67e  ;
+    text-transform: uppercase  ;
+    margin-bottom: 16px  ;
+  }
+  .email-div{
+    display: flex  ;
+    flex-direction: row  ; 
+    align-items: center  ;
+    justify-content: flex-start  ;
+    gap: 5px  ;
+    margin-bottom: 20px  ;
+  }
+
+  .map-web-link-btn{
+    background: linear-gradient(90deg, #4FA381 0%, #E39A72 100%);
+    outline: none  ;
+    text-decoration: none  ;
+    color: white  ;
+    padding: 10px 20px  ;
+    border-radius: 30px  ;
+    text-transform: uppercase  ;
+    margin-top: 20px  ;
+    font-size: 13px ;
+    font-weight: 600  ;
+    width: fit-content  ;
+    text-align: center;
+  }
+  .map-web-link-btn:hover{
+    color: white  ;
+  }
+  .gm-style-iw-d{
+    max-height: unset !important;
+  }
+
+  @media (max-width: 768px) {
+    .root-map-right {
+      flex-direction: column  ;
+      gap: 10px  ;
+    }
+    .oot-map-logo{
+      width: 60px;
+    }
+    .map-loc-name{
+      font-size: 22px ;
+      padding-left: 0px;
+    }
+    .image-container{
+      height: 150px;
+      width: 100%;
+    }
+    .email1name, .email2name{
+      font-size: 18px ;
+      padding-left: 0px;
+    }
+    .gm-style .gm-style-iw-c{
+      max-width: 300px !important;
+      max-height: unset !important;
+    }
+}
+    
