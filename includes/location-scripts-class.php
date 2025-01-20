@@ -32,6 +32,6 @@ class UC_LocationScripts {
     // Enqueue Frontend Scripts
     public static function uc_enqueue_frontend_scripts() {
         wp_enqueue_script('google-maps', 'https://maps.googleapis.com/maps/api/js?key=' . esc_attr(get_option('map_api_key')) . '&libraries=places', [], null, true);
-
+        
     }
 }

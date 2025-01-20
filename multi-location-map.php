@@ -47,7 +47,19 @@ class MultiLocationMap {
         add_action('admin_enqueue_scripts', [UC_LocationScripts::class, 'uc_enqueue_admin_scripts']); // Enqueue admin scripts
         add_action('wp_enqueue_scripts', [UC_LocationScripts::class, 'uc_enqueue_frontend_scripts']); // Enqueue frontend scripts
         add_shortcode('multi_location_map', [UC_LocationShortcode::class, 'render_map_shortcode']); // Shortcode rendering
+        // Modify footer text only for this plugin's settings page
+        add_action('admin_head', [$this, 'hide_wpfooter']);
+
     }
+    public  function hide_wpfooter() {
+        $screen = get_current_screen();
+        if ($screen && $screen->id === 'location_page_map-settings') {
+            echo '<style>#wpfooter { display: none !important; }</style>';
+        }
+    }
+    
+    
+
 }
 
 new MultiLocationMap();

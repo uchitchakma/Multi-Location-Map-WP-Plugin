@@ -28,6 +28,7 @@ class UC_LocationSettings {
         register_setting('map_settings_group', 'map_height_mobile');
         register_setting('map_settings_group', 'map_enable_popup'); // New setting for popup
 
+
     }
 
     public static function render_settings_page() {
@@ -64,13 +65,14 @@ class UC_LocationSettings {
                 <td><input name="map_height_mobile" id="map_height_mobile" type="number" value="' . esc_attr(get_option('map_height_mobile', 300)) . '" class="small-text"> px</td>
             </tr>
             <tr>
-    <th><label for="map_enable_popup">Enable Popups</label></th>
-    <td style="display: flex; align-items: center;">
-        <input type="checkbox" name="map_enable_popup" id="map_enable_popup" value="1" 
-            ' . checked(1, get_option('map_enable_popup', 1), false) . ' />
-        <p class="description">Enable or disable popups when clicking on map pins.</p>
-    </td>
-</tr>
+                <th><label for="map_enable_popup">Enable Popups</label></th>
+                <td style="display: flex; align-items: center;">
+                    <input type="checkbox" name="map_enable_popup" id="map_enable_popup" value="1" 
+                    ' . checked(1, get_option('map_enable_popup', 1), false) . ' />
+                    <p class="description">Enable or disable popups when clicking on map pins.</p>
+            </td>
+            </tr>
+
 
         </table>
         <p class="submit"><input type="submit" class="button-primary" value="Save Changes"></p>
