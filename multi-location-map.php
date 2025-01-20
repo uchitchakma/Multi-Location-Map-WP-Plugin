@@ -1,9 +1,16 @@
 <?php
 /**
  * Plugin Name: Multi Location Map
- * Description: A plugin to display a multi-location map with popups and customizable settings.
+ * Description: A plugin to display a multi-location map with popups and customizable settings, powered by Google Maps.
  * Version: 1.1
- * Author: Your Name
+ * Requires at least: 5.0
+ * Tested up to: 6.7.1
+ * Requires PHP: 7.2
+ * Author: Uchit Chakma
+ * Author URI: https://uchitchakma.com
+ * License: GPLv2 or later
+ * Text Domain: multi-location-map
+ * Domain Path: /languages
  */
 
 // Exit if accessed directly
