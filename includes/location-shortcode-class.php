@@ -21,6 +21,8 @@ class UC_LocationShortcode {
         $map_height_desktop = esc_attr(get_option('map_height_desktop', 500));
         $map_height_tablet = esc_attr(get_option('map_height_tablet', 400));
         $map_height_mobile = esc_attr(get_option('map_height_mobile', 300));
+        $enable_popup = get_option('map_enable_popup', 1); // Get the popup setting (default is enabled)
+
     
         foreach ($locations as $location) {
             $custom_pin_image = get_post_meta($location->ID, '_custom_pin_image', true);
@@ -78,6 +80,9 @@ class UC_LocationShortcode {
                         icon: pinImage,
                     });
                     bounds.extend(position);
+                    
+                    // Only add popups if the setting is enabled
+                    ' . ($enable_popup ? '
                     const infowindow = new google.maps.InfoWindow({
                         content: location.content,
                     });
@@ -89,6 +94,7 @@ class UC_LocationShortcode {
                         infowindow.open(map, marker); // Open the clicked marker\'s InfoWindow
                         activeInfoWindow = infowindow; // Set this InfoWindow as active
                     });
+                    ' : '') . '
                 });
                 map.fitBounds(bounds);
             }
