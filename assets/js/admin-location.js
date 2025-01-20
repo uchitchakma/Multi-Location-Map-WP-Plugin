@@ -5,9 +5,7 @@ jQuery(document).ready(function ($) {
         const autocomplete = new google.maps.places.Autocomplete(input);
 
         // Restrict autocomplete to specific country or region (optional)
-        autocomplete.setComponentRestrictions({
-            country: ['us', 'in'], // Add more country codes if needed
-        });
+        autocomplete.setComponentRestrictions({});
 
         // When a place is selected, populate latitude and longitude
         autocomplete.addListener('place_changed', function () {
