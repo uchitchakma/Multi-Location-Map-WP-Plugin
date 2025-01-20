@@ -62,6 +62,7 @@ class UC_LocationShortcode {
                 const map = new google.maps.Map(document.getElementById("map"), {
                     zoom: 5,
                     center: { lat: 20.5937, lng: 78.9629 },
+                    streetViewControl: false,
                 });
                 const bounds = new google.maps.LatLngBounds();
                 const locations = ' . json_encode($map_data) . ';
